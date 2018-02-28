@@ -6,7 +6,7 @@ Docker Image Packaging for Atlassian Crowd
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/docker-crowd.svg)](https://hub.docker.com/r/alvistack/docker-crowd/)
 
-Crowd Software unlocks the power of agile by giving your team the tools to easily create & estimate stories, build a sprint backlog, identify team commitments & velocity, visualize team activity, and report on your team's progress.
+Crowd is where you manage users from multiple directories - Active Directory, LDAP, Crowd - via a single admin console, and control application permissions from the same place.
 
 Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
