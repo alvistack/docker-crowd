@@ -38,7 +38,7 @@ ENV JVM_SUPPORT_RECOMMENDED_ARGS "-Datlassian.plugins.enable.wait=300"
 VOLUME $CROWD_HOME
 WORKDIR $CROWD_HOME
 
-EXPOSE 8080 8005
+EXPOSE 8095 8020
 
 ENTRYPOINT [ "/usr/local/bin/dumb-init", "--" ]
 CMD [ "/etc/init.d/crowd", "start", "-fg" ]
