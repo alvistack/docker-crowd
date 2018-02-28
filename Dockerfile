@@ -14,11 +14,11 @@
 
 FROM ubuntu:16.04
 
-ENV CROWD_OWNER                   "daemon"
-ENV CROWD_GROUP                   "daemon"
-ENV CROWD_HOME                    "/var/atlassian/application-data/crowd"
-ENV CROWD_CATALINA                "/opt/atlassian/crowd"
-ENV CROWD_DOWNLOAD_URL            "https://downloads.atlassian.com/software/crowd/downloads/atlassian-crowd-3.1.2.tar.gz"
+ENV CROWD_OWNER                  "daemon"
+ENV CROWD_GROUP                  "daemon"
+ENV CROWD_HOME                   "/var/atlassian/application-data/crowd"
+ENV CROWD_CATALINA               "/opt/atlassian/crowd"
+ENV CROWD_DOWNLOAD_URL           "https://downloads.atlassian.com/software/crowd/downloads/atlassian-crowd-3.1.2.tar.gz"
 
 ENV JAVA_HOME                    "/usr/java/default"
 ENV JAVA_DOWNLOAD_URL            "http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jre-8u162-linux-x64.rpm"
