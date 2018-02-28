@@ -61,7 +61,7 @@ RUN set -ex \
 
 # Install Atlassian Crowd
 RUN set -ex \
-    && ARCHIVE="`mktemp --suffix=tar.gz`" \
+    && ARCHIVE="`mktemp --suffix=.tar.gz`" \
     && curl -skL $CROWD_DOWNLOAD_URL > $ARCHIVE \
     && mkdir -p $CROWD_CATALINA \
     && tar zxf $ARCHIVE --strip-components=1 -C $CROWD_CATALINA \
