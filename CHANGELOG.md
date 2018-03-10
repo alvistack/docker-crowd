@@ -1,6 +1,11 @@
 Docker Image Packaging for Atlassian Crowd
 ==========================================
 
+3.1.2-0alvistack5 - 2018-03-11
+------------------------------
+
+-   Simplify Docker image naming
+
 3.1.2-0alvistack1 - 2018-02-28
 ------------------------------
 
