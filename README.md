@@ -4,7 +4,7 @@ Docker Image Packaging for Atlassian Crowd
 [![Travis](https://img.shields.io/travis/alvistack/docker-crowd.svg)](https://travis-ci.org/alvistack/docker-crowd)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/docker-crowd.svg)](https://hub.docker.com/r/alvistack/docker-crowd/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd.svg)](https://hub.docker.com/r/alvistack/crowd/)
 
 Crowd is where you manage users from multiple directories - Active Directory, LDAP, Crowd - via a single admin console, and control application permissions from the same place.
 
@@ -24,7 +24,7 @@ Volume permission is managed by entry scripts. To get started you can use a data
 Start Atlassian Crowd Server:
 
     # Pull latest image
-    docker pull alvistack/docker-crowd
+    docker pull alvistack/crowd
 
     # Run as detach
     docker run \
@@ -32,7 +32,7 @@ Start Atlassian Crowd Server:
         --name crowd \
         --publish 8095:8095 \
         --volume /var/atlassian/application-data/crowd:/var/atlassian/application-data/crowd \
-        alvistack/docker-crowd
+        alvistack/crowd
 
 **Success**. Crowd is now available on <http://localhost:8095>
 
@@ -121,7 +121,7 @@ For evaluations you can use the built-in database that will store its files in t
 Versioning
 ----------
 
-The `latest` tag matches the most recent version of this repository. Thus using `alvistack/docker-crowd:latest` or `alvistack/docker-crowd` will ensure you are running the most up to date version of this image.
+The `latest` tag matches the most recent version of this repository. Thus using `alvistack/crowd:latest` or `alvistack/crowd` will ensure you are running the most up to date version of this image.
 
 License
 -------
