@@ -10,6 +10,12 @@ Crowd is where you manage users from multiple directories - Active Directory, LD
 
 Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
+Supported Tags and Respective `Dockerfile` Links
+------------------------------------------------
+
+-   [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/master/Dockerfile)
+-   [`3.1` (3.1/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.1/Dockerfile)
+
 Overview
 --------
 
