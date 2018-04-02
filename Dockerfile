@@ -35,7 +35,7 @@ WORKDIR $CROWD_HOME
 EXPOSE 8020
 EXPOSE 8095
 
-ENTRYPOINT [ "/usr/local/bin/dumb-init", "--" ]
+ENTRYPOINT [ "dumb-init", "--" ]
 CMD        [ "/etc/init.d/crowd", "start", "-fg" ]
 
 # Prepare APT depedencies
