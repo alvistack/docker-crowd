@@ -14,7 +14,7 @@ Supported Tags and Respective `Dockerfile` Links
 ------------------------------------------------
 
 -   [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/master/Dockerfile)
--   [`3.1` (3.1/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.1/Dockerfile)
+-   [`3.2` (3.2/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.2/Dockerfile)
 
 Overview
 --------
