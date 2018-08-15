@@ -64,13 +64,18 @@ RUN set -ex \
 # Install MySQL Connector/J JAR
 RUN set -ex \
     && ARCHIVE="`mktemp --suffix=.tar.gz`" \
-    && curl -skL https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-8.0.11.tar.gz > $ARCHIVE \
-    && tar zxf $ARCHIVE --strip-components=1 -C $CROWD_CATALINA/apache-tomcat/lib/ mysql-connector-java-8.0.11/mysql-connector-java-8.0.11.jar \
+    && curl -skL https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-8.0.12.tar.gz > $ARCHIVE \
+    && tar zxf $ARCHIVE --strip-components=1 -C $CROWD_CATALINA/apache-tomcat/lib/ mysql-connector-java-8.0.12/mysql-connector-java-8.0.12.jar \
     && rm -rf $ARCHIVE
+
+# Install PostgreSQL JDBC JAR
+RUN set -ex \
+    && rm -rf $CROWD_CATALINA/apache-tomcat/lib/*postgresql*.jar \
+    && curl -skL https://jdbc.postgresql.org/download/postgresql-42.2.4.jar > $CROWD_CATALINA/apache-tomcat/lib/postgresql-42.2.4.jar
 
 # Install dumb-init
 RUN set -ex \
-    && curl -skL https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64 > /usr/local/bin/dumb-init \
+    && curl -skL https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64 > /usr/local/bin/dumb-init \
     && chmod 0755 /usr/local/bin/dumb-init
 
 # Copy files
