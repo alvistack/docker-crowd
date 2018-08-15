@@ -68,6 +68,11 @@ RUN set -ex \
     && tar zxf $ARCHIVE --strip-components=1 -C $CROWD_CATALINA/apache-tomcat/lib/ mysql-connector-java-8.0.12/mysql-connector-java-8.0.12.jar \
     && rm -rf $ARCHIVE
 
+# Install PostgreSQL JDBC JAR
+RUN set -ex \
+    && rm -rf $CROWD_CATALINA/apache-tomcat/lib/*postgresql*.jar \
+    && curl -skL https://jdbc.postgresql.org/download/postgresql-42.2.4.jar > $CROWD_CATALINA/apache-tomcat/lib/postgresql-42.2.4.jar
+
 # Install dumb-init
 RUN set -ex \
     && curl -skL https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64 > /usr/local/bin/dumb-init \
