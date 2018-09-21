@@ -1,6 +1,6 @@
 diff -urp a/opt/atlassian/crowd/apache-tomcat/bin/setenv.sh b/opt/atlassian/crowd/apache-tomcat/bin/setenv.sh
---- a/opt/atlassian/crowd/apache-tomcat/bin/setenv.sh	2018-04-26 21:04:46.803154567 +0800
-+++ b/opt/atlassian/crowd/apache-tomcat/bin/setenv.sh	2018-04-26 21:05:06.618869396 +0800
+--- a/opt/atlassian/crowd/apache-tomcat/bin/setenv.sh	2018-09-21 10:39:47.902024707 +0800
++++ b/opt/atlassian/crowd/apache-tomcat/bin/setenv.sh	2018-09-21 10:50:14.679968996 +0800
 @@ -1,7 +1,11 @@
 -JAVA_OPTS="-Xms128m -Xmx512m -Dfile.encoding=UTF-8 $JAVA_OPTS"
 +JAVA_OPTS="-Xms${JVM_MINIMUM_MEMORY:-128m} -Xmx${JVM_MAXIMUM_MEMORY:-512m} ${JVM_SUPPORT_RECOMMENDED_ARGS:-"-Datlassian.plugins.enable.wait=300"} -Dfile.encoding=UTF-8 $JAVA_OPTS"
@@ -14,9 +14,15 @@ diff -urp a/opt/atlassian/crowd/apache-tomcat/bin/setenv.sh b/opt/atlassian/crow
  # set the location of the pid file
  if [ -z "$CATALINA_PID" ] ; then
      if [ -n "$CATALINA_BASE" ] ; then
+@@ -11,3 +15,5 @@ if [ -z "$CATALINA_PID" ] ; then
+     fi
+ fi
+ export CATALINA_PID
++
++sed -i "s/\(<session-timeout>\).*\(<\/session-timeout>\)/\1${SESSION_TIMEOUT:-30}\2/g" ${CROWD_CATALINA}/apache-tomcat/conf/web.xml
 diff -urp a/opt/atlassian/crowd/apache-tomcat/conf/server.xml b/opt/atlassian/crowd/apache-tomcat/conf/server.xml
---- a/opt/atlassian/crowd/apache-tomcat/conf/server.xml	2018-04-26 21:04:57.210993030 +0800
-+++ b/opt/atlassian/crowd/apache-tomcat/conf/server.xml	2018-04-26 21:05:06.618869396 +0800
+--- a/opt/atlassian/crowd/apache-tomcat/conf/server.xml	2018-09-21 10:39:47.902024707 +0800
++++ b/opt/atlassian/crowd/apache-tomcat/conf/server.xml	2018-09-21 10:31:18.000000000 +0800
 @@ -16,10 +16,18 @@
                     URIEncoding="UTF-8"
                     compression="on"
@@ -38,8 +44,8 @@ diff -urp a/opt/atlassian/crowd/apache-tomcat/conf/server.xml b/opt/atlassian/cr
  
          <!-- To connect to an external web server (typically Apache) -->
 diff -urp a/opt/atlassian/crowd/start_crowd.sh b/opt/atlassian/crowd/start_crowd.sh
---- a/opt/atlassian/crowd/start_crowd.sh	2018-04-26 21:08:10.567772055 +0800
-+++ b/opt/atlassian/crowd/start_crowd.sh	2018-04-26 21:11:23.100932349 +0800
+--- a/opt/atlassian/crowd/start_crowd.sh	2018-09-21 10:39:47.902024707 +0800
++++ b/opt/atlassian/crowd/start_crowd.sh	2018-09-21 10:31:18.000000000 +0800
 @@ -1,17 +1,28 @@
 -#!/bin/sh
 -set -e
