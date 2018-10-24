@@ -1,5 +1,4 @@
-Docker Image Packaging for Atlassian Crowd
-==========================================
+# Docker Image Packaging for Atlassian Crowd
 
 [![Travis](https://img.shields.io/travis/alvistack/docker-crowd.svg)](https://travis-ci.org/alvistack/docker-crowd)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/releases)
@@ -10,21 +9,19 @@ Crowd is where you manage users from multiple directories - Active Directory, LD
 
 Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
-Supported Tags and Respective `Dockerfile` Links
-------------------------------------------------
+## Supported Tags and Respective `Dockerfile` Links
 
--   [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/master/Dockerfile)
--   [`3.3` (3.3/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.3/Dockerfile)
--   [`3.2` (3.2/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.2/Dockerfile)
+  - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/master/Dockerfile)
+  - [`3.3` (3.3/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.3/Dockerfile)
+  - [`3.2` (3.2/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.2/Dockerfile)
 
-Overview
---------
+## Overview
 
 This Docker container makes it easy to get an instance of Crowd up and running.
 
 ### Quick Start
 
-For the `CROWD_HOME` directory that is used to store the repository data (amongst other things) we recommend mounting a host directory as a [data volume](https://docs.docker.com/engine/tutorials/dockervolumes/#/data-volumes), or via a named volume if using a docker version &gt;= 1.9.
+For the `CROWD_HOME` directory that is used to store the repository data (amongst other things) we recommend mounting a host directory as a [data volume](https://docs.docker.com/engine/tutorials/dockervolumes/#/data-volumes), or via a named volume if using a docker version \>= 1.9.
 
 Volume permission is managed by entry scripts. To get started you can use a data volume, or named volumes.
 
@@ -121,8 +118,7 @@ Default session timeout for Apache Tomcat
 
 Default: `30`
 
-Upgrade
--------
+## Upgrade
 
 To upgrade to a more recent version of Crowd Server you can simply stop the Crowd
 container and start a new one based on a more recent image:
@@ -136,26 +132,21 @@ be available after the upgrade.
 
 Note: Please make sure that you don't accidentally remove the crowd container and its volumes using the -v option.
 
-Backup
-------
+## Backup
 
 For evaluations you can use the built-in database that will store its files in the Crowd Server home directory. In that case it is sufficient to create a backup archive of the directory on the host that is used as a volume (`/var/atlassian/application-data/crowd` in the example above).
 
-Versioning
-----------
+## Versioning
 
 The `latest` tag matches the most recent version of this repository. Thus using `alvistack/crowd:latest` or `alvistack/crowd` will ensure you are running the most up to date version of this image.
 
-License
--------
+## License
 
--   Code released under [Apache License 2.0](LICENSE)
--   Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+  - Code released under [Apache License 2.0](LICENSE)
+  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
-Author Information
-------------------
+## Author Information
 
--   Wong Hoi Sing Edison
-    -   <https://twitter.com/hswong3i>
-    -   <https://github.com/hswong3i>
-
+  - Wong Hoi Sing Edison
+      - <https://twitter.com/hswong3i>
+      - <https://github.com/hswong3i>
