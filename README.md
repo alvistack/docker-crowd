@@ -29,7 +29,7 @@ Start Atlassian Crowd Server:
 
     # Pull latest image
     docker pull alvistack/crowd
-
+    
     # Run as detach
     docker run \
         -itd \
