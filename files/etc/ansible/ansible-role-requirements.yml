@@ -1,0 +1,37 @@
+---
+
+- name: ansible
+  src: https://github.com/alvistack/ansible-role-ansible
+  version: master
+
+- name: apt
+  src: https://github.com/alvistack/ansible-role-apt
+  version: master
+
+- name: crowd
+  src: https://github.com/alvistack/ansible-role-crowd
+  version: master
+
+- name: dumb-init
+  src: https://github.com/alvistack/ansible-role-dumb-init
+  version: master
+
+- name: java
+  src: https://github.com/alvistack/ansible-role-java
+  version: master
+
+- name: locales
+  src: https://github.com/alvistack/ansible-role-locales
+  version: master
+
+- name: python
+  src: https://github.com/alvistack/ansible-role-python
+  version: master
+
+- name: timezone
+  src: https://github.com/alvistack/ansible-role-timezone
+  version: master
+
+- name: yum
+  src: https://github.com/alvistack/ansible-role-yum
+  version: master
