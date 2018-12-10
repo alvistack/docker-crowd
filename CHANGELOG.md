@@ -2,7 +2,19 @@
 
 ## 3.3.x-0alvistack1 - TBC
 
+### Major Changes
+
+## 3.3.2-1alvistack1 - 2018-12-10
+
+### Major Changes
+
+  - Update base image to Ubuntu 18.04
+  - Revamp deployment with Ansible roles
+  - Replace Oracle Java with OpenJDK
+
 ## 3.3.2-0alvistack2 - 2018-10-29
+
+### Major Changes
 
   - Handle changes with patch
   - Update dumb-init to v.1.2.2
@@ -11,6 +23,8 @@
   - Add SESSION\_TIMEOUT support
 
 ## 3.1.2-0alvistack5 - 2018-03-11
+
+### Major Changes
 
   - Simplify Docker image naming
 
