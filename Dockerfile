@@ -14,8 +14,8 @@
 
 FROM ubuntu:18.04
 
-ENV CROWD_OWNER                  "daemon"
-ENV CROWD_GROUP                  "daemon"
+ENV CROWD_OWNER                  "crowd"
+ENV CROWD_GROUP                  "crowd"
 ENV CROWD_HOME                   "/var/atlassian/application-data/crowd"
 ENV CROWD_CATALINA               "/opt/atlassian/crowd"
 ENV CROWD_DOWNLOAD_URL           "https://product-downloads.atlassian.com/software/crowd/downloads/atlassian-crowd-3.3.3.tar.gz"
