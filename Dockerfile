@@ -40,6 +40,11 @@ EXPOSE 8095
 ENTRYPOINT [ "dumb-init", "--" ]
 CMD        [ "docker-entrypoint.sh" ]
 
+# Explicitly set system user UID/GID
+RUN set -ex \
+    && groupadd -r $CROWD_OWNER \
+    && useradd -r -g $CROWD_GROUP -d $CROWD_HOME -M -s /usr/sbin/nologin $CROWD_OWNER
+
 # Prepare APT depedencies
 RUN set -ex \
     && apt-get update \
