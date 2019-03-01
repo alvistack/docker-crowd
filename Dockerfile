@@ -18,7 +18,7 @@ ENV CROWD_OWNER                  "crowd"
 ENV CROWD_GROUP                  "crowd"
 ENV CROWD_HOME                   "/var/atlassian/application-data/crowd"
 ENV CROWD_CATALINA               "/opt/atlassian/crowd"
-ENV CROWD_DOWNLOAD_URL           "https://product-downloads.atlassian.com/software/crowd/downloads/atlassian-crowd-3.3.3.tar.gz"
+ENV CROWD_DOWNLOAD_URL           "https://product-downloads.atlassian.com/software/crowd/downloads/atlassian-crowd-3.3.4.tar.gz"
 ENV JAVA_HOME                    "/usr/lib/jvm/java-8-openjdk-amd64"
 ENV JVM_MINIMUM_MEMORY           "128m"
 ENV JVM_MAXIMUM_MEMORY           "512m"
@@ -45,7 +45,7 @@ RUN set -ex \
     && groupadd -r $CROWD_OWNER \
     && useradd -r -g $CROWD_GROUP -d $CROWD_HOME -M -s /usr/sbin/nologin $CROWD_OWNER
 
-# Prepare APT depedencies
+# Prepare APT dependencies
 RUN set -ex \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential curl git libffi-dev libssl-dev python python-dev \
