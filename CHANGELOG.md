@@ -1,11 +1,16 @@
 # Docker Image Packaging for Atlassian Crowd
 
-## 3.3.x-0alvistack1 - TBC
+## 3.4.3-0alvistackx - TBC
+
+### Major Changes
+
+## 3.4.3-0alvistack2 - 2019-04-16
 
 ### Major Changes
 
   - Run systemd service with specific system user
   - Explicitly set system user UID/GID
+  - Porting to Molecule based
 
 ## 3.3.2-1alvistack1 - 2018-12-10
 
