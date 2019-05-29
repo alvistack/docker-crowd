@@ -31,7 +31,4 @@
         - { state: "latest", name: "openjdk-8-jdk" }
       java_home: "/usr/lib/jvm/java-8-openjdk-amd64"
     - role: crowd
-      crowd_download:
-        url: "{{ lookup('env','CROWD_DOWNLOAD_URL') }}"
-        dest: "{{ lookup('env','CROWD_DOWNLOAD_DEST') }}"
-        checksum: "{{ lookup('env','CROWD_DOWNLOAD_CHECKSUM') }}"
+      crowd_version: "{{ lookup('env','CROWD_VERSION') }}"
