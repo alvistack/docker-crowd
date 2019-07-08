@@ -12,8 +12,8 @@ Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 ## Supported Tags and Respective `Dockerfile` Links
 
   - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/master/Dockerfile)
+  - [`3.5` (3.5/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.5/Dockerfile)
   - [`3.4` (3.4/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.4/Dockerfile)
-  - [`3.3` (3.3/Dockerfile)](https://github.com/alvistack/docker-crowd/blob/3.3/Dockerfile)
 
 ## Overview
 
