@@ -14,7 +14,7 @@
 
 FROM ubuntu:18.04
 
-ENV CROWD_VERSION                "3.5.0"
+ENV CROWD_VERSION                "3.5.1"
 ENV CROWD_OWNER                  "crowd"
 ENV CROWD_GROUP                  "crowd"
 ENV CROWD_HOME                   "/var/atlassian/application-data/crowd"
