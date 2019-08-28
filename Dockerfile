@@ -37,8 +37,8 @@ WORKDIR $CROWD_HOME
 EXPOSE 8020
 EXPOSE 8095
 
-ENTRYPOINT [ "dumb-init", "--" ]
-CMD        [ "docker-entrypoint.sh" ]
+ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
+CMD        [ "/opt/atlassian/crowd/start_crowd.sh", "-fg" ]
 
 # Explicitly set system user UID/GID
 RUN set -ex \
