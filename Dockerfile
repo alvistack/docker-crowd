@@ -14,12 +14,12 @@
 
 FROM ubuntu:18.04
 
+ENV JAVA_VERSION                 "1.8.0"
 ENV CROWD_VERSION                "3.5.1"
 ENV CROWD_OWNER                  "crowd"
 ENV CROWD_GROUP                  "crowd"
 ENV CROWD_HOME                   "/var/atlassian/application-data/crowd"
 ENV CROWD_CATALINA               "/opt/atlassian/crowd"
-ENV JAVA_HOME                    "/usr/lib/jvm/java-8-openjdk-amd64"
 ENV JVM_MINIMUM_MEMORY           "128m"
 ENV JVM_MAXIMUM_MEMORY           "512m"
 ENV CATALINA_CONNECTOR_PROXYNAME ""
@@ -37,8 +37,8 @@ WORKDIR $CROWD_HOME
 EXPOSE 8020
 EXPOSE 8095
 
-ENTRYPOINT [ "dumb-init", "--" ]
-CMD        [ "docker-entrypoint.sh" ]
+ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
+CMD        [ "/opt/atlassian/crowd/start_crowd.sh", "-fg" ]
 
 # Explicitly set system user UID/GID
 RUN set -ex \
