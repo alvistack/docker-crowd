@@ -14,7 +14,6 @@
 
 FROM ubuntu:18.04
 
-ENV JAVA_RELEASE                 "1.8.x"
 ENV CROWD_VERSION                "3.6.0"
 ENV CROWD_OWNER                  "crowd"
 ENV CROWD_GROUP                  "crowd"
