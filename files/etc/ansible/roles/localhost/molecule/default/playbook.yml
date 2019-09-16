@@ -28,6 +28,6 @@
   remote_user: root
   roles:
     - role: java
-      java_release: "{{ lookup('env','JAVA_RELEASE') }}"
+      java_release: "8"
     - role: crowd
       crowd_version: "{{ lookup('env','CROWD_VERSION') }}"
