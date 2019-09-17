@@ -31,3 +31,11 @@
       java_release: "8"
     - role: crowd
       crowd_version: "{{ lookup('env','CROWD_VERSION') }}"
+      crowd_jvm_minimum_memory: "{{ lookup('env', 'JVM_MINIMUM_MEMORY') }}"
+      crowd_jvm_maximum_memory: "{{ lookup('env', 'JVM_MAXIMUM_MEMORY') }}"
+      crowd_catalina_connector_proxyname: "{{ lookup('env', 'CATALINA_CONNECTOR_PROXYNAME') }}"
+      crowd_catalina_connector_proxyport: "{{ lookup('env', 'CATALINA_CONNECTOR_PROXYPORT') }}"
+      crowd_catalina_connector_scheme: "{{ lookup('env', 'CATALINA_CONNECTOR_SCHEME') }}"
+      crowd_catalina_connector_secure: "{{ lookup('env', 'CATALINA_CONNECTOR_SECURE') }}"
+      crowd_catalina_context_path: "{{ lookup('env', 'CATALINA_CONTEXT_PATH') }}"
+      crowd_jvm_support_recommended_args: "{{ lookup('env', 'JVM_SUPPORT_RECOMMENDED_ARGS') }}"
