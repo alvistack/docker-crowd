@@ -31,6 +31,10 @@
       java_release: "8"
     - role: crowd
       crowd_version: "{{ lookup('env','CROWD_VERSION') }}"
+      crowd_owner: "{{ lookup('env','CROWD_OWNER') }}"
+      crowd_group: "{{ lookup('env','CROWD_GROUP') }}"
+      crowd_home: "{{ lookup('env','CROWD_HOME') }}"
+      crowd_catalina: "{{ lookup('env','CROWD_CATALINA') }}"
       crowd_jvm_minimum_memory: "{{ lookup('env', 'JVM_MINIMUM_MEMORY') }}"
       crowd_jvm_maximum_memory: "{{ lookup('env', 'JVM_MAXIMUM_MEMORY') }}"
       crowd_catalina_connector_proxyname: "{{ lookup('env', 'CATALINA_CONNECTOR_PROXYNAME') }}"
