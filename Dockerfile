@@ -14,6 +14,11 @@
 
 FROM ubuntu:18.04
 
+ENV LANG   "C.UTF-8"
+ENV LC_ALL "C.UTF-8"
+ENV SHELL  "/bin/bash"
+ENV TZ     "UTC"
+
 ENV CROWD_VERSION                "3.6.0"
 ENV CROWD_OWNER                  "crowd"
 ENV CROWD_GROUP                  "crowd"
