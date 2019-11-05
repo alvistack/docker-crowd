@@ -1,13 +1,19 @@
 # Docker Image Packaging for Atlassian Crowd
 
-## 3.5.x-0alvistack1 - TBC
+## 3.7.0-XalvistackY - TBC
 
 ### Major Changes
 
+## 3.7.0-2alvistack3 - 2019-11-05
+
+### Major Changes
+
+  - Upgrade minimal Ansible support to 2.9.0
+  - Upgrade Travis CI test as Ubuntu Bionic based
   - Default with Python 3
+  - Hotfix for en\_US.utf8 locale
   - Allow the container to be stated with `--user`
-  - Simplify parameters combination with `JAVA_RELEASE`
-  - Simplify parameters combination with `BAMBOO_VERSION`
+  - Simplify parameters combination with `CROWD_VERSION`
   - Prepend executable if command starts with an option
   - Improve `ENTRYPOINT` and `CMD`
 
