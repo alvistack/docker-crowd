@@ -13,3 +13,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+java_release: "{{ lookup('env', 'JAVA_RELEASE') }}"
+crowd_version: "{{ lookup('env','CROWD_VERSION') }}"
+crowd_owner: "{{ lookup('env','CROWD_OWNER') }}"
+crowd_group: "{{ lookup('env','CROWD_GROUP') }}"
+crowd_home: "{{ lookup('env','CROWD_HOME') }}"
+crowd_catalina: "{{ lookup('env','CROWD_CATALINA') }}"
+crowd_jvm_minimum_memory: "{{ lookup('env', 'JVM_MINIMUM_MEMORY') }}"
+crowd_jvm_maximum_memory: "{{ lookup('env', 'JVM_MAXIMUM_MEMORY') }}"
+crowd_catalina_connector_proxyname: "{{ lookup('env', 'CATALINA_CONNECTOR_PROXYNAME') }}"
+crowd_catalina_connector_proxyport: "{{ lookup('env', 'CATALINA_CONNECTOR_PROXYPORT') }}"
+crowd_catalina_connector_scheme: "{{ lookup('env', 'CATALINA_CONNECTOR_SCHEME') }}"
+crowd_catalina_connector_secure: "{{ lookup('env', 'CATALINA_CONNECTOR_SECURE') }}"
+crowd_catalina_context_path: "{{ lookup('env', 'CATALINA_CONTEXT_PATH') }}"
+crowd_jvm_support_recommended_args: "{{ lookup('env', 'JVM_SUPPORT_RECOMMENDED_ARGS') }}"

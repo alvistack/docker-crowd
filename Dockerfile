@@ -19,6 +19,7 @@ ENV LC_ALL "en_US.utf8"
 ENV SHELL  "/bin/bash"
 ENV TZ     "UTC"
 
+ENV JAVA_RELEASE                 "8"
 ENV CROWD_VERSION                "3.7.0"
 ENV CROWD_OWNER                  "crowd"
 ENV CROWD_GROUP                  "crowd"
