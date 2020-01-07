@@ -28,6 +28,6 @@
 - hosts: all
   remote_user: root
   roles:
-    - role: java
+    - role: openjdk
     - role: crowd
     - role: localhost
