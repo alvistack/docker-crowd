@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-java_release: "{{ lookup('env', 'JAVA_RELEASE') }}"
+openjdk_release: "{{ lookup('env', 'OPENJDK_RELEASE') }}"
 crowd_version: "{{ lookup('env','CROWD_VERSION') }}"
 crowd_owner: "{{ lookup('env','CROWD_OWNER') }}"
 crowd_group: "{{ lookup('env','CROWD_GROUP') }}"

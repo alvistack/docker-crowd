@@ -35,8 +35,8 @@
 - name: gosu
   src: https://github.com/alvistack/ansible-role-gosu/archive/master.tar.gz
 
-- name: java
-  src: https://github.com/alvistack/ansible-role-java/archive/master.tar.gz
+- name: openjdk
+  src: https://github.com/alvistack/ansible-role-openjdk/archive/master.tar.gz
 
 - name: crowd
   src: https://github.com/alvistack/ansible-role-crowd/archive/master.tar.gz
