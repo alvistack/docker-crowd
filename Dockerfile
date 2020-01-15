@@ -42,7 +42,7 @@ WORKDIR $CROWD_HOME
 EXPOSE 8020
 EXPOSE 8095
 
-ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
+ENTRYPOINT [ "tini", "-g", "--", "docker-entrypoint.sh" ]
 CMD        [ "start_crowd.sh", "-fg" ]
 
 # Hotfix for en_US.utf8 locale

@@ -1,8 +1,16 @@
 # Docker Image Packaging for Atlassian Crowd
 
-## 3.7.0-XalvistackY - TBC
+## 3.7.1-XalvistackY - TBC
 
 ### Major Changes
+
+## 3.7.1-3alvistack1 - 2020-01-15
+
+### Major Changes
+
+  - Replace `dumb-init` with `tini`, as like as `docker --init`
+  - Replace `java` with `openjdk`
+  - Include release specific vars and tasks
 
 ## 3.7.0-2alvistack3 - 2019-11-05
 
