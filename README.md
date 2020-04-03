@@ -1,6 +1,6 @@
 # Docker Image Packaging for Atlassian Crowd
 
-[![Travis](https://img.shields.io/travis/alvistack/docker-crowd.svg)](https://travis-ci.org/alvistack/docker-crowd)
+[![Travis](https://img.shields.io/travis/com/alvistack/docker-crowd.svg)](https://travis-ci.com/alvistack/docker-crowd)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd.svg)](https://hub.docker.com/r/alvistack/crowd/)
@@ -149,7 +149,7 @@ The `latest` tag matches the most recent [GitHub Release](https://github.com/alv
 
 ### `alvistack/crowd:<version>`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.org/alvistack/docker-crowd) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-crowd) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
