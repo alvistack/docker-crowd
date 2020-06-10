@@ -1,9 +1,14 @@
 # Docker Image Packaging for Atlassian Crowd
 
-## 4.0.0-XalvistackY - TBC
+## 4.0.2-XalvistackY - TBC
 
 ### Major Changes
 
+## 4.0.2-4alvistack3 - 2020-06-10
+
+### Major Changes
+
+  - Revamp `create`, `side_effect`, `verify` and `destroy` logic
   - Replace `tini` with `catatonit`
   - Rename `post_tasks.yml` as `side_effect.yml`
   - Upgrade base image to Ubuntu 20.04
