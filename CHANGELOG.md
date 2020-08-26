@@ -1,9 +1,14 @@
 # Docker Image Packaging for Atlassian Crowd
 
-## 4.0.2-XalvistackY - TBC
+## 4.1.0-XalvistackY - TBC
 
 ### Major Changes
 
+## 4.1.0-4alvistack4 - 2020-08-26
+
+### Major Changes
+
+  - Upgrade minimal Ansible Lint support to 4.3.2
   - Upgrade Travis CI test as Ubuntu Focal based
   - Upgrade minimal Ansible support to 2.10.0
 
