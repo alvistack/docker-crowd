@@ -14,14 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-openjdk_release: "8"
+openjdk_release: "11"
 crowd_version: "4.1.1"
 crowd_owner: "crowd"
 crowd_group: "crowd"
 crowd_home: "/var/atlassian/application-data/crowd"
 crowd_catalina: "/opt/atlassian/crowd"
-crowd_jvm_minimum_memory: "1024m"
-crowd_jvm_maximum_memory: "1024m"
+crowd_jvm_minimum_memory: "2048m"
+crowd_jvm_maximum_memory: "2048m"
 crowd_catalina_connector_proxyname: ~
 crowd_catalina_connector_proxyport: ~
 crowd_catalina_connector_scheme: "http"
@@ -30,5 +30,5 @@ crowd_catalina_context_path: "/"
 crowd_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300
   -XX:+UnlockExperimentalVMOptions
-  -XX:+UseCGroupMemoryLimitForHeap
-  -XX:MaxRAMFraction=1
+  -XX:+UseContainerSupport
+  -XX:+UseZGC
