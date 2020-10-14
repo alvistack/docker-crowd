@@ -1,9 +1,15 @@
 # Docker Image Packaging for Atlassian Crowd
 
-## 4.1.0-XalvistackY - TBC
+## 4.1.1-XalvistackY - TBC
 
 ### Major Changes
 
+## 4.1.1-4alvistack4 - 2020-10-14
+
+### Major Changes
+
+  - Upgrade minimal AdoptOpenJDK support to 11
+  - Migrate GC from `G1GC` to `ZGC`
   - Refine Molecule matrix
 
 ## 4.1.0-4alvistack4 - 2020-08-26
