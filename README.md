@@ -9,10 +9,10 @@ Crowd is where you manage users from multiple directories - Active Directory, LD
 
 Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
-## Supported Tags and Respective `Dockerfile` Links
+## Supported Tags and Respective Packer Template Links
 
-  - [`4.1`, `latest`](https://github.com/alvistack/docker-crowd/blob/master/molecule/4.1/Dockerfile.j2)
-  - [`4.0`](https://github.com/alvistack/docker-crowd/blob/master/molecule/4.0/Dockerfile.j2)
+  - [`4.1`, `latest`](https://github.com/alvistack/docker-crowd/blob/master/packer/4.1/packer.json)
+  - [`4.0`](https://github.com/alvistack/docker-crowd/blob/master/packer/4.0/packer.json)
 
 ## Overview
 
@@ -20,8 +20,7 @@ This Docker container makes it easy to get an instance of Crowd up and running.
 
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
-  - Minimized `Dockerfile` for meta data definition
-  - Provision by Ansible and Molecule Docker driver in single layer
+  - Packaging by Packer Docker builder and Ansible provisioner in single layer
   - Handle `ENTRYPOINT` with [catatonit](https://github.com/openSUSE/catatonit)
 
 ### Quick Start
