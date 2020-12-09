@@ -1,6 +1,6 @@
 # Docker Image Packaging for Atlassian Crowd
 
-[![Travis](https://img.shields.io/travis/com/alvistack/docker-crowd.svg)](https://travis-ci.com/alvistack/docker-crowd)
+[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-crowd/master)](https://gitlab.com/alvistack/docker-crowd/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd.svg)](https://hub.docker.com/r/alvistack/crowd/)
