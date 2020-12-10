@@ -11,8 +11,8 @@ Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`4.1`, `latest`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.1/packer.json)
-  - [`4.0`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.0/packer.json)
+  - [`4.2`, `latest`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.2/packer.json)
+  - [`4.1`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.1/packer.json)
 
 ## Overview
 
