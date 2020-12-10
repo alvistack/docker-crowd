@@ -1,6 +1,6 @@
 # Docker Image Packaging for Atlassian Crowd
 
-## 4.1.1-XalvistackY - TBC
+## 4.2.2-XalvistackY - TBC
 
 ### Major Changes
 

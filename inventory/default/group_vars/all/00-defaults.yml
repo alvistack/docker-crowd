@@ -15,7 +15,7 @@
 # limitations under the License.
 
 openjdk_release: "8"
-crowd_version: "4.1.1"
+crowd_version: "4.2.2"
 crowd_owner: "crowd"
 crowd_group: "crowd"
 crowd_home: "/var/atlassian/application-data/crowd"

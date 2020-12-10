@@ -65,14 +65,14 @@ default:
   before_script:
     - *script-git-submodule
 
+docker-4.2:
+  <<: *job-packer
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "4.2"
+
 docker-4.1:
   <<: *job-packer
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "4.1"
-
-docker-4.0:
-  <<: *job-packer
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "4.0"
