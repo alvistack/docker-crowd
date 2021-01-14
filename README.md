@@ -1,9 +1,9 @@
 # Docker Image Packaging for Atlassian Crowd
 
-[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-crowd/master)](https://gitlab.com/alvistack/docker-crowd/-/pipelines)
+[![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-crowd/master)](https://gitlab.com/alvistack/docker-crowd/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd.svg)](https://hub.docker.com/r/alvistack/crowd/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd-4.2.svg)](https://hub.docker.com/r/alvistack/crowd-4.2)
 
 Crowd is where you manage users from multiple directories - Active Directory, LDAP, Crowd - via a single admin console, and control application permissions from the same place.
 
@@ -11,8 +11,10 @@ Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`4.2`, `latest`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.2/packer.json)
-  - [`4.1`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.1/packer.json)
+  - [`alvistack/crowd-4.2`](https://hub.docker.com/r/alvistack/crowd-4.2)
+      - [`packer/docker-4.2/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.2/packer.json)
+  - [`alvistack/crowd-4.1`](https://hub.docker.com/r/alvistack/crowd-4.1)
+      - [`packer/docker-4.1/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.1/packer.json)
 
 ## Overview
 
@@ -142,13 +144,13 @@ For evaluations you can use the built-in database that will store its files in t
 
 ## Versioning
 
-### `alvistack/crowd:latest`
+### `YYYYMMDD.Y.Z`
 
-The `latest` tag matches the most recent [GitHub Release](https://github.com/alvistack/docker-crowd/releases) of this repository. Thus using `alvistack/crowd:latest` or `alvistack/crowd` will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-crowd/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
-### `alvistack/crowd:<version>`
+### `YYYYMMDD.0.0`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-crowd) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](https://gitlab.com/alvistack/docker-crowd/-/pipelines) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
