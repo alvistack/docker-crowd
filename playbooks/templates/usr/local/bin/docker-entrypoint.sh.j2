@@ -2,7 +2,7 @@
 
 # {{ ansible_managed }}
 
-set -euo pipefail
+set -euxo pipefail
 
 # Prepend executable if command starts with an option
 if [ "${1:0:1}" = '-' ]; then
@@ -15,6 +15,11 @@ if [ "$1" = 'start_crowd.sh' ] && [ "$(id -u)" = '0' ]; then
     chown $CROWD_OWNER:$CROWD_GROUP $CROWD_HOME $CROWD_HOME/shared
     chmod 0755 $CROWD_HOME $CROWD_HOME/shared
     exec gosu $CROWD_OWNER "$BASH_SOURCE" "$@"
+fi
+
+# Verify configuration with Ansible
+if [ "$1" = 'start_crowd.sh' ]; then
+    ansible-playbook --tags crowd /etc/ansible/playbooks/converge.yml
 fi
 
 exec "$@"
