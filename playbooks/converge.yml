@@ -34,28 +34,36 @@
         create_home: false
         state: "present"
 
-    - include_role:
+    - name: include role
+      include_role:
         name: python
 
-    - include_role:
+    - name: include role
+      include_role:
         name: ansible
 
-    - include_role:
+    - name: include role
+      include_role:
         name: locales
 
-    - include_role:
+    - name: include role
+      include_role:
         name: timezone
 
-    - include_role:
+    - name: include role
+      include_role:
         name: catatonit
 
-    - include_role:
+    - name: include role
+      include_role:
         name: gosu
 
-    - include_role:
+    - name: include role
+      include_role:
         name: openjdk
 
-    - include_role:
+    - name: include role
+      include_role:
         name: crowd
         apply:
           tags: crowd
