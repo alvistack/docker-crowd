@@ -19,7 +19,7 @@ fi
 
 # Verify configuration with Ansible
 if [ "$1" = 'start_crowd.sh' ]; then
-    ansible-playbook --tags crowd /etc/ansible/playbooks/converge.yml
+    ansible-playbook /etc/ansible/playbooks/verify.yml
 fi
 
 exec "$@"

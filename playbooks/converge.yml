@@ -83,9 +83,6 @@
     - name: include role
       include_role:
         name: crowd
-        apply:
-          tags: crowd
-      tags: crowd
 
     - name: apt-get install
       apt:
