@@ -3,7 +3,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-crowd/master)](https://gitlab.com/alvistack/docker-crowd/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd-4.2.svg)](https://hub.docker.com/r/alvistack/crowd-4.2)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd-4.3.svg)](https://hub.docker.com/r/alvistack/crowd-4.3)
 
 Crowd is where you manage users from multiple directories - Active Directory, LDAP, Crowd - via a single admin console, and control application permissions from the same place.
 
@@ -11,10 +11,10 @@ Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
 ## Supported Tags and Respective Packer Template Links
 
+  - [`alvistack/crowd-4.3`](https://hub.docker.com/r/alvistack/crowd-4.3)
+      - [`packer/docker-4.3/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.3/packer.json)
   - [`alvistack/crowd-4.2`](https://hub.docker.com/r/alvistack/crowd-4.2)
       - [`packer/docker-4.2/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.2/packer.json)
-  - [`alvistack/crowd-4.1`](https://hub.docker.com/r/alvistack/crowd-4.1)
-      - [`packer/docker-4.1/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.1/packer.json)
 
 ## Overview
 
@@ -34,7 +34,7 @@ Volume permission is NOT managed by entry scripts. To get started you can use a 
 Start Atlassian Crowd Server:
 
     # Pull latest image
-    docker pull alvistack/crowd
+    docker pull alvistack/crowd-4.3
     
     # Run as detach
     docker run \
@@ -42,7 +42,7 @@ Start Atlassian Crowd Server:
         --name crowd \
         --publish 8095:8095 \
         --volume /var/atlassian/application-data/crowd:/var/atlassian/application-data/crowd \
-        alvistack/crowd
+        alvistack/crowd-4.3
 
 **Success**. Crowd is now available on <http://localhost:8095>
 
