@@ -4,12 +4,12 @@
 
 set -euxo pipefail
 
-# Prepend executable if command starts with an option
+# Prepend executable if command starts with an option.
 if [ "${1:0:1}" = '-' ]; then
     set -- start_crowd.sh "$@"
 fi
 
-# Allow the container to be stated with `--user`
+# Allow the container to be stated with `--user`.
 if [ "$1" = 'start_crowd.sh' ] && [ "$(id -u)" = '0' ]; then
     mkdir -p $CROWD_HOME $CROWD_HOME/shared
     chown $CROWD_OWNER:$CROWD_GROUP $CROWD_HOME $CROWD_HOME/shared
@@ -17,7 +17,7 @@ if [ "$1" = 'start_crowd.sh' ] && [ "$(id -u)" = '0' ]; then
     exec gosu $CROWD_OWNER "$BASH_SOURCE" "$@"
 fi
 
-# Verify configuration with Ansible
+# Verify configuration with Ansible.
 if [ "$1" = 'start_crowd.sh' ]; then
     ansible-playbook /etc/ansible/playbooks/verify.yml
 fi

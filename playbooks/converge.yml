@@ -82,23 +82,21 @@
       include_role:
         name: gosu
 
-    - name: include role
-      include_role:
-        name: openjdk
+    - name: groupadd
+      group:
+        name: "{{ crowd_group }}"
+        system: true
+        state: "present"
 
-    - name: include role
-      include_role:
-        name: crowd
-
-    - name: apt-get install
-      apt:
-        name: "{{ item.name }}"
-        state: "{{ item.state }}"
-      loop:
-        - { state: "latest", name: "rsync" }
-        - { state: "latest", name: "sudo" }
-      register: result
-      until: result is succeeded
+    - name: useradd
+      user:
+        name: "{{ crowd_owner }}"
+        group: "{{ crowd_group }}"
+        home: "{{ crowd_home }}"
+        shell: "/usr/sbin/nologin"
+        system: true
+        create_home: false
+        state: "present"
 
     - name: prepare directories
       file:
@@ -108,22 +106,7 @@
         mode: "{{ item.mode | default('0755') }}"
         state: "{{ item.state | default('directory') }}"
       loop:
-        - { dest: "/etc/ansible" }
-        - { dest: "/etc/ansible/group_vars/all" }
-        - { dest: "/etc/ansible/playbooks" }
-        - { dest: "/etc/ansible/roles" }
         - { dest: "/etc/sudoers.d" }
-
-    - name: rsync directories
-      synchronize:
-        src: "{{ item.src }}"
-        dest: "{{ item.dest }}"
-        archive: true
-        delete: true
-      loop:
-        - { src: "../inventory/default/", dest: "/etc/ansible" }
-        - { src: "../roles/", dest: "/etc/ansible/roles" }
-        - { src: "../playbooks/", dest: "/etc/ansible/playbooks" }
 
     - name: copy templates
       template:
@@ -133,9 +116,7 @@
         group: "{{ item.group | default('root') }}"
         mode: "{{ item.mode | default('0644') }}"
       loop:
-        - { dest: "/etc/ansible/ansible.cfg" }
-        - { dest: "/etc/ansible/group_vars/all/99-packer.yml" }
-        - { dest: "/etc/sudoers.d/crowd" }
+        - { dest: "/etc/sudoers.d/crowd", mode: "0400" }
 
     - name: prepare files
       file:
@@ -145,6 +126,12 @@
         mode: "{{ item.mode | default('0644') }}"
         state: "{{ item.state | default('file') }}"
       loop:
-        - { dest: "/etc/ansible/ansible.cfg" }
-        - { dest: "/etc/ansible/group_vars/all/99-packer.yml" }
-        - { dest: "/etc/sudoers.d/crowd" }
+        - { dest: "/etc/sudoers.d/crowd", mode: "0400" }
+
+    - name: include role
+      include_role:
+        name: openjdk
+
+    - name: include role
+      include_role:
+        name: crowd
