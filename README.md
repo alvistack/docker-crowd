@@ -4,7 +4,9 @@
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd-4.3.svg)](https://hub.docker.com/r/alvistack/crowd-4.3)
+
 Crowd is where you manage users from multiple directories - Active Directory, LDAP, Crowd - via a single admin console, and control application permissions from the same place.
+
 Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
 ## Supported Tags and Respective Packer Template Links
@@ -17,6 +19,7 @@ Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 ## Overview
 
 This Docker container makes it easy to get an instance of Crowd up and running.
+
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
   - Packaging by Packer Docker builder and Ansible provisioner in single layer
@@ -25,29 +28,38 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 ### Quick Start
 
 For the `CROWD_HOME` directory that is used to store the repository data (amongst other things) we recommend mounting a host directory as a [data volume](https://docs.docker.com/engine/tutorials/dockervolumes/#/data-volumes), or via a named volume if using a docker version \>= 1.9.
+
 Volume permission is NOT managed by entry scripts. To get started you can use a data volume, or named volumes.
+
 Start Atlassian Crowd Server:
-\# Pull latest image
-docker pull alvistack/crowd-4.3
-\# Run as detach
-docker run   
-\-itd   
-\--name crowd   
-\--publish 8095:8095   
-\--volume /var/atlassian/application-data/crowd:/var/atlassian/application-data/crowd   
-alvistack/crowd-4.3
+
+    # Pull latest image
+    docker pull alvistack/crowd-4.3
+    
+    # Run as detach
+    docker run \
+        -itd \
+        --name crowd \
+        --publish 8095:8095 \
+        --volume /var/atlassian/application-data/crowd:/var/atlassian/application-data/crowd \
+        alvistack/crowd-4.3
+
 **Success**. Crowd is now available on <http://localhost:8095>
+
 Please ensure your container has the necessary resources allocated to it. We recommend 2GiB of memory allocated to accommodate both the application server and the git processes. See [Supported Platforms](https://confluence.atlassian.com/display/Crowd/Supported+Platforms) for further information.
 
 ## Upgrade
 
 To upgrade to a more recent version of Crowd Server you can simply stop the Crowd
 container and start a new one based on a more recent image:
-docker stop crowd
-docker rm crowd
-docker run ... (see above)
+
+    docker stop crowd
+    docker rm crowd
+    docker run ... (see above)
+
 As your data is stored in the data volume directory on the host, it will still
 be available after the upgrade.
+
 Note: Please make sure that you don't accidentally remove the crowd container and its volumes using the -v option.
 
 ## Backup
