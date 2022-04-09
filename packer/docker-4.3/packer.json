@@ -2,17 +2,17 @@
   "builders": [
     {
       "changes": [
-        "ENV LANG en_US.UTF-8",
-        "ENV LC_ALL en_US.UTF-8",
-        "ENV SHELL /bin/bash",
-        "ENV TZ UTC",
-        "ENV CROWD_OWNER crowd",
-        "ENV CROWD_GROUP crowd",
-        "ENV CROWD_HOME /var/atlassian/application-data/crowd",
-        "ENV CROWD_CATALINA /opt/atlassian/crowd",
-        "ENV PATH $PATH:$CROWD_CATALINA",
-        "VOLUME $CROWD_HOME",
-        "WORKDIR $CROWD_HOME",
+        "ENV LANG=en_US.UTF-8",
+        "ENV LC_ALL=en_US.UTF-8",
+        "ENV SHELL=/bin/bash",
+        "ENV TZ=UTC",
+        "ENV CROWD_OWNER=crowd",
+        "ENV CROWD_GROUP=crowd",
+        "ENV CROWD_HOME=/var/atlassian/application-data/crowd",
+        "ENV CROWD_CATALINA=/opt/atlassian/crowd",
+        "ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/atlassian/crowd",
+        "VOLUME /var/atlassian/application-data/crowd",
+        "WORKDIR /var/atlassian/application-data/crowd",
         "EXPOSE 8020",
         "EXPOSE 8095",
         "ENTRYPOINT [\"catatonit\", \"-g\", \"--\", \"docker-entrypoint.sh\"]",
@@ -41,7 +41,7 @@
         "set -eu",
         "apt-get update",
         "DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -y",
-        "DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates curl gcc iproute2 language-pack-en locales python3 sudo"
+        "DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates curl gcc hostname iproute2 language-pack-en locales python3 sudo"
       ],
       "type": "shell"
     },
