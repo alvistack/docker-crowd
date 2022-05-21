@@ -18,9 +18,10 @@ namespace: alvistack
 name: docker-crowd
 description: Docker Image Packaging for Atlassian Crowd
 
-version: VERSION
+version: 0.0.0
 readme: README.md
-license: Apache-2.0
+license:
+  - Apache-2.0
 
 repository: https://github.com/alvistack/docker-crowd
 documentation: https://github.com/alvistack/docker-crowd
