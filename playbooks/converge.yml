@@ -91,3 +91,16 @@
     - name: include role
       ansible.builtin.include_role:
         name: crowd
+
+    - name: symlink files
+      ansible.builtin.shell: |
+        set -euxo pipefail
+        cd /opt/atlassian/crowd/apache-tomcat/lib
+        rm -rf *postgresql*.jar
+        ln -fs /usr/share/java/postgresql.jar .
+        rm -rf *mysql-connector-java*.jar
+        ln -fs /usr/share/java/mysql-connector-java.jar .
+      args:
+        executable: "/bin/bash"
+      changed_when: false
+      failed_when: false
