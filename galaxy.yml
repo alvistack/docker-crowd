@@ -15,7 +15,7 @@
 # limitations under the License.
 
 namespace: alvistack
-name: docker-crowd
+name: crowd
 description: Docker Image Packaging for Atlassian Crowd
 
 version: 0.0.0
