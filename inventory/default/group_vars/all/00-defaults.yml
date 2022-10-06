@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # openjdk
-openjdk_release: "8"
+openjdk_release: "11"
 
 # crowd
 crowd_owner: "crowd"
@@ -32,6 +32,4 @@ crowd_catalina_context_path: "/"
 crowd_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300
   -XX:+UnlockExperimentalVMOptions
-  -XX:+UseCGroupMemoryLimitForHeap
-  -XX:MaxRAMFraction=1
 crowd_session_timeout: "120"
