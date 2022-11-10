@@ -13,10 +13,10 @@ Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`alvistack/crowd-5.0`](https://hub.docker.com/r/alvistack/crowd-5.0)
-      - [`packer/docker-5.0/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-5.0/packer.json)
-  - [`alvistack/crowd-4.4`](https://hub.docker.com/r/alvistack/crowd-4.4)
-      - [`packer/docker-4.4/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.4/packer.json)
+-   [`alvistack/crowd-5.0`](https://hub.docker.com/r/alvistack/crowd-5.0)
+    -   [`packer/docker-5.0/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-5.0/packer.json)
+-   [`alvistack/crowd-4.4`](https://hub.docker.com/r/alvistack/crowd-4.4)
+    -   [`packer/docker-4.4/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-4.4/packer.json)
 
 ## Overview
 
@@ -24,8 +24,8 @@ This Docker container makes it easy to get an instance of Crowd up and running.
 
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
-  - Packaging by Packer Docker builder and Ansible provisioner in single layer
-  - Handle `ENTRYPOINT` with [catatonit](https://github.com/openSUSE/catatonit)
+-   Packaging by Packer Docker builder and Ansible provisioner in single layer
+-   Handle `ENTRYPOINT` with [catatonit](https://github.com/openSUSE/catatonit)
 
 ### Quick Start
 
@@ -37,7 +37,7 @@ Start Atlassian Crowd Server:
 
     # Pull latest image
     docker pull alvistack/crowd-5.0
-    
+
     # Run as detach
     docker run \
         -itd \
@@ -78,11 +78,11 @@ Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](
 
 ## License
 
-  - Code released under [Apache License 2.0](LICENSE)
-  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+-   Code released under [Apache License 2.0](LICENSE)
+-   Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
-  - Wong Hoi Sing Edison
-      - <https://twitter.com/hswong3i>
-      - <https://github.com/hswong3i>
+-   Wong Hoi Sing Edison
+    -   <https://twitter.com/hswong3i>
+    -   <https://github.com/hswong3i>
