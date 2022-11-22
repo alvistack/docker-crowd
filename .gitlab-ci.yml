@@ -134,6 +134,45 @@ default:
   before_script:
     - *script-git-submodule
 
+build:crowd-5.1-docker:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: "$CI_PIPELINE_ID-crowd-5.1-docker"
+    paths:
+      - packer/*/output-docker
+  variables:
+    _IMAGE: "crowd-5.1"
+    _PROVIDER: "docker"
+
+test:crowd-5.1-docker:
+  <<: *job-molecule-test
+  stage: test
+  cache:
+    key: "$CI_PIPELINE_ID-crowd-5.1-docker"
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: "crowd-5.1"
+    _PROVIDER: "docker"
+  needs:
+    - build:crowd-5.1-docker
+
+deploy:crowd-5.1-docker:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-crowd-5.1-docker"
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: "crowd-5.1"
+    _PROVIDER: "docker"
+  needs:
+    - test:crowd-5.1-docker
+
 build:crowd-5.0-docker:
   <<: *job-packer-build
   stage: build
