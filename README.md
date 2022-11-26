@@ -5,7 +5,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-crowd/master)](https://gitlab.com/alvistack/docker-crowd/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd-5.0.svg)](https://hub.docker.com/r/alvistack/crowd-5.0)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/crowd-5.1.svg)](https://hub.docker.com/r/alvistack/crowd-5.1)
 
 Crowd is where you manage users from multiple directories - Active Directory, LDAP, Crowd - via a single admin console, and control application permissions from the same place.
 
@@ -13,6 +13,8 @@ Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
 ## Supported Tags and Respective Packer Template Links
 
+-   [`alvistack/crowd-5.1`](https://hub.docker.com/r/alvistack/crowd-5.1)
+    -   [`packer/docker-5.1/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-5.1/packer.json)
 -   [`alvistack/crowd-5.0`](https://hub.docker.com/r/alvistack/crowd-5.0)
     -   [`packer/docker-5.0/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-5.0/packer.json)
 -   [`alvistack/crowd-4.4`](https://hub.docker.com/r/alvistack/crowd-4.4)
@@ -36,7 +38,7 @@ Volume permission is NOT managed by entry scripts. To get started you can use a 
 Start Atlassian Crowd Server:
 
     # Pull latest image
-    docker pull alvistack/crowd-5.0
+    docker pull alvistack/crowd-5.1
 
     # Run as detach
     docker run \
@@ -44,7 +46,7 @@ Start Atlassian Crowd Server:
         --name crowd \
         --publish 8095:8095 \
         --volume /var/atlassian/application-data/crowd:/var/atlassian/application-data/crowd \
-        alvistack/crowd-5.0
+        alvistack/crowd-5.1
 
 **Success**. Crowd is now available on <http://localhost:8095>
 
