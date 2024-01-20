@@ -14,9 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# openjdk
-openjdk_release: "11"
-
 # crowd
 crowd_owner: "crowd"
 crowd_group: "crowd"
