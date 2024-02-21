@@ -30,5 +30,6 @@ crowd_catalina_connector_proxyport: ~
 crowd_catalina_context_path: ~
 crowd_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300
+  -XX:+IgnoreUnrecognizedVMOptions
   -XX:+UnlockExperimentalVMOptions
 crowd_autologin_cookie_age: "120"
