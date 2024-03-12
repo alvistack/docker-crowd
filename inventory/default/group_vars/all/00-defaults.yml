@@ -15,19 +15,19 @@
 # limitations under the License.
 
 # crowd
-crowd_owner: "crowd"
-crowd_group: "crowd"
-crowd_home: "/var/atlassian/application-data/crowd"
-crowd_catalina: "/opt/atlassian/crowd"
-crowd_jvm_minimum_memory: "2048m"
-crowd_jvm_maximum_memory: "2048m"
-crowd_jvm_reserved_code_cache_size: "512m"
+crowd_owner: crowd
+crowd_group: crowd
+crowd_home: /var/atlassian/application-data/crowd
+crowd_catalina: /opt/atlassian/crowd
+crowd_jvm_minimum_memory: 2048m
+crowd_jvm_maximum_memory: 2048m
+crowd_jvm_reserved_code_cache_size: 512m
 crowd_catalina_connector_port: "8095"
-crowd_catalina_connector_scheme: ~
-crowd_catalina_connector_secure: ~
-crowd_catalina_connector_proxyname: ~
-crowd_catalina_connector_proxyport: ~
-crowd_catalina_context_path: ~
+crowd_catalina_connector_scheme:
+crowd_catalina_connector_secure:
+crowd_catalina_connector_proxyname:
+crowd_catalina_connector_proxyport:
+crowd_catalina_context_path:
 crowd_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300
   -XX:+IgnoreUnrecognizedVMOptions
