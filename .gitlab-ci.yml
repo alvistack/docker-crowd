@@ -134,6 +134,45 @@ default:
     - *script-git-submodule
     - *script-linters
 
+build:crowd-6.0-docker:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: $CI_PIPELINE_ID-crowd-6.0-docker
+    paths:
+      - packer/*/output-docker
+  variables:
+    _IMAGE: crowd-6.0
+    _PROVIDER: docker
+
+test:crowd-6.0-docker:
+  <<: *job-molecule-test
+  stage: test
+  cache:
+    key: $CI_PIPELINE_ID-crowd-6.0-docker
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: crowd-6.0
+    _PROVIDER: docker
+  needs:
+    - build:crowd-6.0-docker
+
+deploy:crowd-6.0-docker:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: $CI_PIPELINE_ID-crowd-6.0-docker
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: crowd-6.0
+    _PROVIDER: docker
+  needs:
+    - test:crowd-6.0-docker
+
 build:crowd-5.3-docker:
   <<: *job-packer-build
   stage: build
