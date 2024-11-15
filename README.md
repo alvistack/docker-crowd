@@ -27,8 +27,6 @@ Learn more about Crowd: <https://www.atlassian.com/software/crowd>
   - [`packer/docker-5.3/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-5.3/packer.json)
 - [`alvistack/crowd-5.2`](https://hub.docker.com/r/alvistack/crowd-5.2)
   - [`packer/docker-5.2/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-5.2/packer.json)
-- [`alvistack/crowd-5.1`](https://hub.docker.com/r/alvistack/crowd-5.1)
-  - [`packer/docker-5.1/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-5.1/packer.json)
 
 ## Overview
 
