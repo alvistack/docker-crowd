@@ -16,4 +16,4 @@
 
 crowd_release: "6.3"
 
-openjdk_release: "17"
+openjdk_release: "21"
