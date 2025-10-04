@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/docker-crowd.svg)](https://gith
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/docker-crowd.svg)](https://github.com/alvistack/docker-crowd/blob/master/LICENSE)
 [![Docker
-Pulls](https://img.shields.io/docker/pulls/alvistack/crowd-7.0.svg)](https://hub.docker.com/r/alvistack/crowd-7.0)
+Pulls](https://img.shields.io/docker/pulls/alvistack/crowd-7.1.svg)](https://hub.docker.com/r/alvistack/crowd-7.1)
 
 Crowd is where you manage users from multiple directories - Active
 Directory, LDAP, Crowd - via a single admin console, and control
@@ -19,8 +19,8 @@ Learn more about Crowd: <https://www.atlassian.com/software/crowd>
 
 ## Supported Tags and Respective Packer Template Links
 
-- [`alvistack/crowd-7.0`](https://hub.docker.com/r/alvistack/crowd-7.0)
-  - [`packer/docker-7.0/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-7.0/packer.json)
+- [`alvistack/crowd-7.1`](https://hub.docker.com/r/alvistack/crowd-7.1)
+  - [`packer/docker-7.1/packer.json`](https://github.com/alvistack/docker-crowd/blob/master/packer/docker-7.1/packer.json)
 
 ## Overview
 
@@ -48,7 +48,7 @@ can use a data volume, or named volumes.
 Start Atlassian Crowd Server:
 
     # Pull latest image
-    docker pull alvistack/crowd-7.0
+    docker pull alvistack/crowd-7.1
 
     # Run as detach
     docker run \
@@ -56,7 +56,7 @@ Start Atlassian Crowd Server:
         --name crowd \
         --publish 8095:8095 \
         --volume /var/atlassian/application-data/crowd:/var/atlassian/application-data/crowd \
-        alvistack/crowd-7.0
+        alvistack/crowd-7.1
 
 **Success**. Crowd is now available on <http://localhost:8095>
 
